@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-16riz0vic8z&cstq_uach$*mamw^*-d8kcg7u2hi($&v4kkfwv
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -110,6 +110,12 @@ USE_I18N = True
 
 USE_TZ = True
 
+#added to access admin from khan-al.site
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://khan-al.site",
+    "https://www.khan-al.site",
+]
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
